@@ -1,5 +1,5 @@
 <div align="center">
-    <img src=".github/intro.png" alt="ChatGPT Miniprogram" width='600' />
+    <img src=".github/intro.png" alt="ChatGPT Miniprogram"  />
 </div>
 
 <p align="center"><samp>该小程序仅作为演示，如需部署请按照以下流程操作</samp></p>
