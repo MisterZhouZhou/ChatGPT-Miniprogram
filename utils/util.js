@@ -265,3 +265,13 @@ export const shareImageFormat = (params) => {
     return params;
   }
 };
+
+/**
+ * @method isIPhoneX 是否为iphonex
+ * @returns boolean
+ */
+export const isIPhoneX = () => {
+  let screenHeight = wx.getSystemInfoSync().screenHeight
+  let bottom = wx.getSystemInfoSync().safeArea.bottom
+  return screenHeight !== bottom
+}

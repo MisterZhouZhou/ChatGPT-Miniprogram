@@ -1,9 +1,12 @@
 <view class="message">
     <view class="message__wrap {{role === 'user' && 'message__layout--reverse'}} animate__animated animate__fadeInUp">
-        <view class="message__box message__box--{{role}}">
-            <text class="message__box--text" user-select wx:if="{{content}}">{{content}}</text>
-            <slot wx:else></slot>
-        </view>
-        <view class="message__avatar "></view>
+      <!-- 富文本消息 -->
+      <towxml wx:if="{{item.md}}" user-select='{{true}}' class='message__box message__box--assistant message__box--tow' nodes="{{item.md}}"></towxml>
+      <!-- 文本和自定义消息 -->
+      <view wx:else class="message__box message__box--{{role}}">
+        <text wx:if="{{item.content}}" class="message__box--text" user-select>{{item.content}}</text>
+        <slot wx:else></slot>
+      </view>
+      <view class="message__avatar "></view>
     </view>
 </view>

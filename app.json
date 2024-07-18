@@ -1,21 +1,41 @@
 {
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f4f5f5",
-    "navigationBarTitleText": "ChatGPT Miniprogram",
-    "navigationBarTextStyle": "black"
-  },
-  "lazyCodeLoading": "requiredComponents",
-  "resolveAlias": {
-    "~/*": "/*"
-  },
-  "usingComponents": {
-    "custom-loading": "/components/custom-loading/index"
-  },
-  "sitemapLocation": "sitemap.json",
-  "pages": [
-    "pages/home/index",
-    "pages/prompt/index",
-    "pages/settings/index"
-  ]
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#f4f5f5",
+		"navigationBarTitleText": "ChatGPT Miniprogram",
+		"navigationBarTextStyle": "black"
+	},
+	"lazyCodeLoading": "requiredComponents",
+	"resolveAlias": {
+		"~/*": "/*"
+	},
+	"usingComponents": {
+		"custom-loading": "/components/custom-loading/index"
+	},
+	"tabBar": {
+		"color": "#000",
+		"selectedColor": "#07c160",
+		"list": [
+			{
+				"pagePath": "pages/home/index",
+				"text": "首页",
+				"iconPath": "assets/images/tab-home.png",
+				"selectedIconPath": "assets/images/tab-home-selected.png"
+			},
+			{
+				"pagePath": "pages/settings/index",
+				"text": "我的",
+				"iconPath": "assets/images/tab-mine.png",
+				"selectedIconPath": "assets/images/tab-mine-selected.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json",
+	"pages": [
+		"pages/home/index",
+		"pages/prompt/index",
+		"pages/settings/index",
+		"pages/chat/index",
+		"pages/hotel/index"
+	]
 }

@@ -2,6 +2,7 @@
     "component": true,
     "usingComponents": {
         "t-avatar": "tdesign-miniprogram/avatar/avatar",
-        "t-icon": "tdesign-miniprogram/icon/icon"
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "towxml":"/towxml/towxml"
     }
 }

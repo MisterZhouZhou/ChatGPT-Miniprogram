@@ -32,6 +32,10 @@
     background-color: skyblue;
 }
 
+.message__box--tow {
+  padding-bottom: 0;
+}
+
 .message__avatar--user {
     background-color: #fff;
     border-radius: 50%;
@@ -43,7 +47,7 @@
 }
 
 .message__box--assistant {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .message__box--user {

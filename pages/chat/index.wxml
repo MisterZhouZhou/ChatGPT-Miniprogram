@@ -1,0 +1,69 @@
+<view class="chat">
+	<t-navbar>
+		<t-icon slot='left' name="chevron-left" bind:tap="goBack" size="50rpx" />
+		<view slot='title' class="navbar__title" bindtap="handleSwitchRole">
+			<t-avatar image="/assets/images/prompt-{{currentPrompt.title || 'default'}}.svg" size="60rpx" />
+			<text>{{currentPrompt.name}}</text>
+			<t-icon name="chevron-right" size="34rpx" />
+		</view>
+	</t-navbar>
+	<scroll-view 
+    scroll-top="{{scrollTop}}"
+    scroll-y="{{true}}" 
+    style="height:calc(100% - {{contentHeight}}px)"
+    scroll-with-animation="{{true}}" 
+    class="content" 
+    id="message" 
+    scroll-into-view="item-{{currentItem}}"
+  >
+    <view class="scroll-view-content">
+      <view class="content__gutter--top"></view>
+      <!-- 大语言模型 -->
+      <message-item role="assistant">
+        <text>{{currentPrompt.description}}</text>
+      </message-item>
+      <view wx:for="{{messageList}}" wx:key="index" id="item-{{index}}">
+        <message-item 
+          data-index="{{index}}" 
+          role="{{item.role}}" 
+          item="{{item}}" 
+          finished="{{item.finished}}" 
+          bind:share="handleMessageShare" 
+        />
+      </view>
+      <!-- 思考的消息 -->
+      <message-item role="assistant" id="item-loading" wx:if="{{thinking}}">
+        <div class="bubble">
+          <div class="bubble__circle"></div>
+          <div class="bubble__circle"></div>
+          <div class="bubble__circle"></div>
+        </div>
+      </message-item>
+      <view id="item-bottom" class="content__gutter--bottom"></view>
+    </view>
+	</scroll-view>
+	<view class="footer" id="footer" style="bottom: {{fixedTop}}px">
+		<view class="footer__content">
+			<button wx:if="{{thinking}}" class="btn-clear footer__content--clear" bindtap="handleCancel">
+				<t-icon name="close-circle" size="50rpx" color="#C55348" />
+			</button>
+			<button wx:else class="btn-clear footer__content--clear" bindtap="handleClear">
+				<t-icon name="clear" size="50rpx" />
+			</button>
+			<t-input 
+        value="{{inputValue}}" 
+        t-class="t-input-padding-class" 
+        maxlength="{{200}}" 
+        confirm-type="send" 
+        disabled="{{loading || thinking}}" 
+        disableDefaultPadding="{{true}}" 
+        show-confirm-bar="{{false}}" 
+        adjust-position="{{false}}" 
+        clearable 
+        bind:keyboardheightchange="handleKeyboardHeightChange" 
+        bind:change="handleValueChange" 
+        bind:enter="handleSendClick" />
+		</view>
+	</view>
+	<!-- <view class="footer__safe-area"></view> -->
+</view>

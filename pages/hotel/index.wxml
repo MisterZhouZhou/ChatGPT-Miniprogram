@@ -1,0 +1,4 @@
+<!--pages/hotel/index.wxml-->
+<view>
+  <image src="https://img1.baidu.com/it/u=244974803,2329719892&fm=253&fmt=auto&app=120&f=JPEG?w=570&h=380" class="hotel-img" />
+</view>

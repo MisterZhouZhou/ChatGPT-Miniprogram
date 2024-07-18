@@ -3,6 +3,7 @@ import { Home } from './utils/router';
 import { reLaunch } from './utils/util';
 
 App({
+  towxml:require('/towxml/index'),
   onLaunch() {
     // 获取全局唯一的版本更新管理器，用于管理小程序更新
     const updateManager = wx.getUpdateManager();

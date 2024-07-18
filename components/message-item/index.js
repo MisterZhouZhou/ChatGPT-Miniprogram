@@ -11,9 +11,13 @@ Component({
             type: String,
             default: 'assistant',
         },
-        content: {
-            type: String,
-            default: '',
+        // content: {
+        //     type: String,
+        //     default: '',
+        // },
+        item: {
+          type: Object,
+          default: {}
         },
     },
 
