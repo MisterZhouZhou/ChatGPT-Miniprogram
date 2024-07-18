@@ -21,6 +21,12 @@
 				"text": "首页",
 				"iconPath": "assets/images/tab-home.png",
 				"selectedIconPath": "assets/images/tab-home-selected.png"
+      },
+      {
+				"pagePath": "pages/message/index",
+				"text": "消息",
+				"iconPath": "assets/images/tab-message.png",
+				"selectedIconPath": "assets/images/tab-message-selected.png"
 			},
 			{
 				"pagePath": "pages/settings/index",
@@ -36,6 +42,7 @@
 		"pages/prompt/index",
 		"pages/settings/index",
 		"pages/chat/index",
-		"pages/hotel/index"
+		"pages/hotel/index",
+		"pages/message/index"
 	]
 }

@@ -1,0 +1,13 @@
+/* pages/message/index.wxss */
+.navbar__title {
+	position: relative;
+	display: flex;
+  align-items: center;
+}
+
+.navbar__title text {
+	font-weight: bold;
+	padding-left: 16rpx;
+	padding-right: 4rpx;
+	font-size: 34rpx;
+}

@@ -1,4 +1,4 @@
 <!--pages/hotel/index.wxml-->
 <view>
-  <image src="https://img1.baidu.com/it/u=244974803,2329719892&fm=253&fmt=auto&app=120&f=JPEG?w=570&h=380" class="hotel-img" />
+  <web-view src="https://m.ctrip.com/webapp/hotels/detail?hotelid=80935588&atime=20240718&days=1&htlrequestId=100048765-0a2d7c30-478134-169667&poiValue=&geoValue=&__redirectback=1&price_decimal=1&passfromlist=vG9Trw5XegBTsUNI+b+aA9KDJGZzSOGad3slvFEXD5xlHBY5OpctPmlaNhnY2PB7bfI8WudWsbKi9dWgV7vbbZWcrX9uT4jWqDLveM5jVsqUTakTxyF/MXZXgJlbs9Uk5bpq0mxP+sPtdQqbqwlXMw==&listVersion="></web-view>
 </view>

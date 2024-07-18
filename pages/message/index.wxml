@@ -1,0 +1,8 @@
+<!--pages/message/index.wxml-->
+<view>
+  <t-navbar>
+		<view slot='title' class="navbar__title">
+			<text>消息</text>
+		</view>
+	</t-navbar>
+</view>

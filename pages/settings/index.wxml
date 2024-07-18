@@ -12,6 +12,6 @@
 		</button>
 	</t-cell-group>
 	<view class="settings__footer">
-		<text>v2.1.2</text>
+		<text>v1.0.1</text>
 	</view>
 </view>
